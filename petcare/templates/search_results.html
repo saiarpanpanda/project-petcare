@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="{% static 'search_results.css' %}">
+</head>
+<body>
+  {% include 'partials/nav.html'%}
+
+  
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  
+
+  <table>
+    <thead>
+      <tr>
+        <th>Registration No.</th>
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Species</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>Gender</th>
+        <th>Owner Name</th>
+        <th>Owner Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for dog_patient in dog_patients %}
+        <tr>
+          <td><a href="{% url 'dog_patient_detail' registration_no=dog_patient.registration_no%}"  >{{ dog_patient.registration_no }}</a></td>
+          <td>{{ dog_patient.name }}</td>
+          <td>{{ dog_patient.breed }}</td>
+          <td>{{ dog_patient.species }}</td>
+          <td>{{ dog_patient.age }}</td>
+          <td>{{ dog_patient.weight }}</td>
+          <td>{{ dog_patient.gender }}</td>
+          <td>{{ dog_patient.owner_name }}</td>
+          <td>{{ dog_patient.owner_phone }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="9">No dog patients found.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

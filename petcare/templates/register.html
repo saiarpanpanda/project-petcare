@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dog Patient Registration</title>
+  <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+  {% include 'partials/nav.html'%}
+  <h1>Dog Patient Registration</h1>
+  
+<form class="grid-table-form" action="{% url 'register' %}" method="post">
+  {% csrf_token %}
+  
+  <div class="form-row">
+    <label for="{{ form.registration_no.id_for_label }}">Registration No:</label>
+    {{ form.registration_no }}
+  </div>
+
+  <div class="form-row">
+    <label for="{{ form.name.id_for_label }}">Name:</label>
+    {{ form.name }}
+  </div>
+  <div class="form-row">
+    <label for="{{ form.breed.id_for_label }}">Breed:</label>
+    {{ form.breed }}
+  </div>
+  <div class="form-row">
+    <label for="{{ form.species.id_for_label }}">Species:</label>
+    {{ form.species }}
+  </div>
+  <div class="form-row">
+    <label for="{{ form.age.id_for_label }}">Age:</label>
+    {{ form.age }}
+  </div>
+  <div class="form-row">
+    <label for="{{ form.weight.id_for_label }}">Weight:</label>
+    {{ form.weight }}
+  </div>
+  <div class="form-row">
+    <label for="{{ form.gender.id_for_label }}">Gender:</label>
+    {{ form.gender }}
+  </div>
+  <div class="form-row">
+    <label for="{{ form.owner_name.id_for_label }}">Owner Name:</label>
+    {{ form.owner_name }}
+  </div>
+  <div class="form-row">
+    <label for="{{ form.owner_phone.id_for_label }}">Owner Phone:</label>
+    {{ form.owner_phone }}
+  </div>
+  <input type="submit" value="Save">
+</form>
+
+</body>
+</html>

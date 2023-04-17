@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blood Report</title>
+  <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+  {% include 'partials/nav.html'%}
+   <h1>Blood Report </h1>
+   <form class="grid-table-form" action="{% url 'blood_report' %}" method="post">
+    {% csrf_token %}
+  
+    <div class="form-row">
+      <label for="{{ form.patient_name.id_for_label }}">Patient Name:</label>
+      {{ form.patient_name }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.blood_type.id_for_label }}">Blood Type:</label>
+      {{ form.blood_type }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.hemoglobin_level.id_for_label }}">Hemoglobin Level:</label>
+      {{ form.hemoglobin_level }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.Thyroid.id_for_label }}">Thyroid:</label>
+      {{ form.Thyroid }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.LFT.id_for_label }}">LFT:</label>
+      {{ form.LFT }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.Lipid_Profile.id_for_label }}">Lipid Profile:</label>
+      {{ form.Lipid_Profile }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.KFT.id_for_label }}">KFT:</label>
+      {{ form.KFT }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.urine_cultune.id_for_label }}">Urine Cultune:</label>
+      {{ form.urine_cultune }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.Anbiotic_Sensitivity_Test.id_for_label }}">Antibiotic Sensitivity Test:</label>
+      {{ form.Anbiotic_Sensitivity_Test }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.Glucose.id_for_label }}">Glucose:</label>
+      {{ form.Glucose }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.Skin_CULTURE.id_for_label }}">Skin Culture:</label>
+      {{ form.Skin_CULTURE }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.STOOL_TEST.id_for_label }}">Stool Test:</label>
+      {{ form.STOOL_TEST }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.PHYSICAL_EXAMINATION_OF_URINE.id_for_label }}">Physical Examination of Urine:</label>
+      {{ form.PHYSICAL_EXAMINATION_OF_URINE }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.Pancreatic_Enzyymes.id_for_label }}">Pancreatic Enzymes:</label>
+      {{ form.Pancreatic_Enzyymes }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.Inflammation.id_for_label }}">Inflammation:</label>
+      {{ form.Inflammation }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.Complete_Blood_Count.id_for_label }}">Complete Blood Count:</label>
+      {{ form.Complete_Blood_Count }}
+    </div>
+  
+    <div class="form-row">
+      <label for="{{ form.Blood_Protozoa.id_for_label }}">Blood Protozoa:</label>
+      {{ form.Blood_Protozoa }}
+    </div>
+  
+    <input type="submit" value="Save">
+  </form>
+  
+</body>
+</html>

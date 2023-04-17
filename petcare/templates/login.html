@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>petcare</title>
+        <link rel="stylesheet" href="{% static 'login.css' %}" />
+       
+    </head>
+    <body>
+        
+        
+        <div class="login">
+        <div class="h1">
+            <h1>Login Here</h1>
+            <form method="post" action="{% url 'login' %}">
+              {% csrf_token %}
+        </div>
+        <div class="user">
+            <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Enter Your id"
+            />
+        </div>
+        <div class="user">
+            <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter Your Password"
+            />
+        </div>
+       <input class="btn" type="submit" value="login" onclick="validate()">
+        </div> 
+    </body>
+</html>

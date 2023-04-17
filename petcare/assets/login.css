@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    }
+
+    body{
+        background: url(man-gd9c9b314c_1920.jpg);
+        background-size: cover; 
+    }
+    .login{ 
+       color: black;
+        position: absolute;
+        top: 35%;
+        left: 45%; 
+    }   
+    .login h1{
+        font-family:cursive;
+        width: 80%;
+        display: inline-block;
+        font-size: 25px;
+        border-bottom: 5px solid rgb(192, 34, 17);
+        margin-bottom: 15px;
+        padding: 13px 0;
+        color: rgb(15, 1, 1);
+    }
+    .user{
+        width: 100%; 
+        margin: 22px 0px;
+        border-bottom: 2px solid rgba(121, 121, 39, 0.774);
+    }
+    .user input{  
+        background: none;
+        width: 75%;
+        padding: 5px 5px;
+        font-size: 15px;
+        border: none;
+        outline:none;
+        color: black;
+    }
+    .btn{
+        color: white;
+        cursor: pointer;
+        outline: none; 
+        margin: 12px 21px;
+        padding: 10px 21px;
+        border: 1px solid rgba(121, 121, 39, 0.774);
+        border-radius: 20px;
+        font-size: 18px;
+        background: none;
+        font-weight: bold;
+        
+        
+    }
+    .btn:hover{
+        opacity: 1;
+        color:black; 
+        background: white; 
+        
+    }
